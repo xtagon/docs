@@ -1,0 +1,104 @@
+openapi: "3.0.0"
+info:
+  title: Battlesnake Client API
+  version: 0.0.1
+paths:
+  /start:
+    post:
+      summary: Signal start of a new game
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GameState"
+      responses:
+        "200":
+          description: Snake configuration
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StartResponse"
+  /move:
+    post:
+      summary: TODO
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GameState"
+      responses:
+        "200":
+          description: TODO
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MoveResponse"
+  /end:
+    post:
+      summary: TODO
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GameState"
+      responses:
+        default:
+          description: response ignored
+components:
+  schemas:
+    Coords:
+      type: array
+      items:
+        type: integer
+      minItems: 2
+      maxItems: 2
+    Snake:
+      type: object
+      properties:
+        name:
+          type: string
+    Board:
+      type: object
+      properties:
+        height:
+          type: integer
+        width:
+          type: integer
+        food:
+          type: array
+          items:
+            $ref: "#/components/schemas/Coords"
+        snakes:
+          type: array
+          items:
+            $ref: "#/components/schemas/Snake"
+    GameState:
+      type: object
+      properties:
+        game:
+          type: string
+          example: "todo"
+        turn:
+          type: integer
+        board:
+          $ref: '#/components/schemas/Board'
+    StartResponse:
+      type: object
+      properties:
+        color:
+          type: string
+        head:
+          type: string
+          enum: [todo]
+        tail:
+          type: string
+          enum: [todo]
+    MoveResponse:
+      type: object
+      properties:
+        move:
+          type: string
+          enum: [up, down, left, right]
