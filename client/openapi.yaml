@@ -1,6 +1,6 @@
-openapi: "3.0.0"
+openapi: "3.0.1"
 info:
-  title: Battlesnake Client API
+  title: Battlesnake Snake API
   version: 0.0.1
 paths:
   /start:
@@ -21,7 +21,7 @@ paths:
                 $ref: "#/components/schemas/StartResponse"
   /move:
     post:
-      summary: TODO
+      summary: Take a turn within a given game
       requestBody:
         required: true
         content:
@@ -30,14 +30,14 @@ paths:
               $ref: "#/components/schemas/GameState"
       responses:
         "200":
-          description: TODO
+          description: Snake move
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/MoveResponse"
   /end:
     post:
-      summary: TODO
+      summary: Signal end of a game
       requestBody:
         required: true
         content:
@@ -80,9 +80,10 @@ components:
       properties:
         game:
           type: string
-          example: "todo"
+          example: "game-id-string"
         turn:
           type: integer
+          minimum: 0
         board:
           $ref: '#/components/schemas/Board'
     StartResponse:
@@ -90,12 +91,6 @@ components:
       properties:
         color:
           type: string
-        head:
-          type: string
-          enum: [todo]
-        tail:
-          type: string
-          enum: [todo]
     MoveResponse:
       type: object
       properties:
