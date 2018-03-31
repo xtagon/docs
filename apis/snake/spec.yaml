@@ -1,72 +1,96 @@
 openapi: "3.0.1"
 info:
-  title: Battlesnake Snake API
-  version: 0.0.1
+  title: "Battlesnake Snake API"
+  version: "0.0.1"
+  description: "Battlesnake participants implement this API in order to play the game. See battlesnake.io for details."
 paths:
   /start:
     post:
-      summary: Signal start of a new game
+      summary: "Signal start of a new game"
+      tags:
+        - webhooks
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/GameState"
+              $ref: "#/components/schemas/Game"
       responses:
         "200":
-          description: Snake configuration
+          description: "Snake configuration"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/StartResponse"
   /move:
     post:
-      summary: Take a turn within a given game
+      summary: "Take a turn within a given game"
+      tags:
+        - webhooks
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/GameState"
+              $ref: "#/components/schemas/Game"
       responses:
         "200":
-          description: Snake move
+          description: "Snake move"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/MoveResponse"
   /end:
     post:
-      summary: Signal end of a game
+      summary: "Signal end of a game"
+      tags:
+        - webhooks
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/GameState"
+              $ref: "#/components/schemas/Game"
       responses:
         default:
-          description: response ignored
+          description: "Response ignored"
 components:
   schemas:
     Coords:
       type: array
       items:
         type: integer
+      example: [3, 5]
       minItems: 2
       maxItems: 2
     Snake:
       type: object
       properties:
+        id:
+          type: string
+          example: "snake-id-string"
         name:
           type: string
+          example: "Sneky Snek"
+        health:
+          type: integer
+          minimum: 0
+          example: 90
+        body:
+          type: array
+          items:
+            $ref: "#/components/schemas/Coords"
     Board:
       type: object
       properties:
         height:
           type: integer
+          minimum: 1
+          example: 15
         width:
           type: integer
+          minimum: 1
+          example: 15
         food:
           type: array
           items:
@@ -75,25 +99,28 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Snake"
-    GameState:
+    Game:
       type: object
       properties:
-        game:
+        id:
           type: string
           example: "game-id-string"
         turn:
           type: integer
           minimum: 0
+          example: 4
         board:
-          $ref: '#/components/schemas/Board'
+          $ref: "#/components/schemas/Board"
     StartResponse:
       type: object
       properties:
         color:
           type: string
+          example: "#ff00ff"
     MoveResponse:
       type: object
       properties:
         move:
           type: string
-          enum: [up, down, left, right]
+          enum: ["up", "down", "left", "right"]
+          example: "right"
