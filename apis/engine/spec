@@ -1,0 +1,202 @@
+openapi: "3.0.1"
+info:
+  title: "Battlesnake Engine API"
+  version: "0.0.1"
+  description: "This is the api of the Battlesnake game engine. See battlesnake.io for details."
+paths:
+  /games:
+    post:
+      summary: "Create a new game in the engine"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateRequest"
+      responses:
+        "200":
+          description: "Game ID"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateResponse"
+  /games/{id}/start:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: ID of the game to start
+    post:
+      summary: "Start an already created game"
+      responses:
+        "200":
+          description: "Start Game"
+          
+  /games/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: ID of the game to retrieve
+    get:
+      summary: "Get the status of a game"
+      responses:
+        "200":
+          description: "Game status"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StatusResponse"
+                
+  /games/{id}/frames:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: ID of the game to retrieve frames for
+    get:
+      summary: "Get the frames of a game"
+      responses:
+        "200":
+          description: "Game status"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ListGameFramesResponse"
+      
+components:
+  schemas:
+    CreateRequest:
+      type: object
+      required:
+        - width
+        - height
+        - food
+        - snakes
+      properties:
+        width:
+          type: integer
+          example: 20
+        height:
+          type: integer
+          example: 20
+        food:
+          type: integer
+          example: 10
+        snakes:
+          type: array
+          items:
+            $ref: "#/components/schemas/SnakeOptions"
+    CreateResponse:
+      type: object
+      properties:
+        id:
+          type: string
+    SnakeOptions:
+      type: object
+      required:
+        - name
+        - url
+      properties:
+        name:
+          type: string
+          example: "snake 1"
+        url:
+          type: string
+          example: "https://snake1.herokuapp.com"
+        id:
+          type: string
+          example: ""
+    ListGameFramesResponse:
+      type: object
+      properties:
+        frames:
+          type: array
+          items:
+            $ref: "#/components/schemas/GameFrame"
+    StatusResponse:
+      type: object
+      properties:
+        game:
+          $ref: "#/components/schemas/Game"
+        lastFrame:
+          $ref: "#/components/schemas/GameFrame"
+    Game:
+      type: object
+      properties:
+        ID:
+          type: string
+          example: 8a59a4e4-c7d7-4bec-a38d-be9d5cecf768
+        Status:
+          type: string
+          example: "Running"
+        Width:
+          type: integer
+          example: 20
+        Height:
+          type: integer
+          example: 20
+        SnakeTimeout:
+          type: integer
+          example: 200
+    GameFrame:
+      type: object
+      properties:
+        Turn:
+          type: integer
+          example: 10
+        Food:
+          type: array
+          items:
+            $ref: "#/components/schemas/Point"
+        Snakes:
+          type: array
+          items:
+            $ref: "#/components/schemas/Snake"
+    Point:
+      type: object
+      properties:
+        X:
+          type: integer
+          example: 2
+        Y:
+          type: integer
+          example: 5
+    Snake:
+      type: object
+      properties:
+        ID:
+          type: string
+          example: c6b73031-8c4a-4fe4-8690-4582dd6b070b
+        Name:
+          type: string
+        URL:
+          type: string
+        Body:
+          type: array
+          items:
+            $ref: "#/components/schemas/Point"
+        Health:
+          type: integer
+        Death:
+          $ref: "#/components/schemas/DeathCause"
+        Color:
+          type: string
+          description: the hex code of the color of the snake
+    DeathCause:
+      type: object
+      properties:
+        Cause:
+          type: string
+          enum: [snake-collision, starvation, head-collision, wall-collision]
+          description: this records how the snake died, and is one of the 4 possible enum values
+        Turn:
+          type: integer
+          description: this is the turn that the snake died on
+          
