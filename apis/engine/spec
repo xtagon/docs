@@ -60,6 +60,16 @@ paths:
           type: string
         required: true
         description: ID of the game to retrieve frames for
+      - in: query
+        name: offset
+        schema: 
+          type: integer
+        description: starting index of frames to retrieve
+      - in: query
+        name: limit
+        schema: 
+          type: integer
+        description: maximum number of frames to retrieve, if no limit is supplied 100 frames will be returned
     get:
       summary: "Get the frames of a game"
       responses:
@@ -69,6 +79,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ListGameFramesResponse"
+                
+  /socket/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: ID of the game to retrieve frames for
+    get:
+      summary: websocket connection for streaming frames
+      responses:
+        "200":
+          description: websocket connection
       
 components:
   schemas:
