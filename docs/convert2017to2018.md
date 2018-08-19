@@ -2,9 +2,22 @@
 
 The goal of this guide is to detail the differences from the previous year so one knows what to do to convert a 2017 Battlesnake to work in the 2018 engine. Due to the nature of Battlesnake that will mean adjusting how your snake deals with the various post routes on your server.
 
-### General Notes
+## General Notes
 
 At the point in time of the writing of this doc the engine does not deal with taunts, user selected head/tail shapes or a profile picture. Some if not all of this functionality should be reincorporated later in the development process. Including them in your response objects shouldn't (fingers crossed) harm anything. 
+
+## Engine/Rule Changes
+
+In previous years the check for death occurred after the snake movements have been implemented. In 2018 the new order is:
+
+1. Grow Head
+2. Check for Death
+3. Check for Eating Food
+* If no eating occurred, remove tail.
+
+Due to this the act of moving into a space currently occupied by the tip of a snake's tail will result in a collision and DEATH :skull:, in previous years that spot would have been vacated and therefore safe (unless that snake had eaten).
+
+## Route Request/Response Changes
 
 ## /start POST
 
@@ -60,6 +73,7 @@ The move request JSON has be adjusted and will take the most effort to account f
 
 The major changes are as follows:
 
+* The dead snakes are no longer removed from the `snakes`. If you wish to use logic based on other (living) snakes you must first determine the snakes status by looking its health in the `snakes` object.
 
 * The `data` and `object` properties has been removed from all points in the JSON. For example a comparison of the body coords were as follows:
 
@@ -92,8 +106,6 @@ In general any use of the `data` key can be removed, with its children keys move
 * The board height and width, along with the food and snakes data have been moved under the `board` property. 
 
 * The game id is now found under the `game` property.
-
-* The data for dead snakes has been removed.
 
 ### Response JSON
 
