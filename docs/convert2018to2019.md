@@ -1,6 +1,6 @@
-# Battlesnake 2017 to 2018 Conversion Guide
+# Battlesnake 2018 to 2019 Conversion Guide
 
-The goal of this guide is to detail the differences from the previous year so one knows what to do to convert a 2017 Battlesnake to work in the 2018 engine. Due to the nature of Battlesnake that will mean adjusting how your snake deals with the various post routes on your server.
+The goal of this guide is to detail the differences from the previous year so one knows what to do to convert a 2018 Battlesnake to work in the 2019 engine. Due to the nature of Battlesnake that will mean adjusting how your snake deals with the various post routes on your server.
 
 ## General Notes
 
@@ -8,7 +8,7 @@ At the point in time of the writing of this doc the engine does not deal with ta
 
 ## Engine/Rule Changes
 
-In previous years the check for death occurred after the snake movements have been implemented. In 2018 the new order is:
+In previous years the check for death occurred after the snake movements have been implemented. In 2019 the new order is:
 
 1. Grow Head
 2. Check for Death
@@ -77,7 +77,7 @@ The major changes are as follows:
 
 * The `data` and `object` properties has been removed from all points in the JSON. For example a comparison of the body coords were as follows:
 
-2017:
+2018:
 ```
   "you": {
     "body": {
@@ -90,7 +90,7 @@ The major changes are as follows:
       "object": "list"
     }
 ```
-2018:
+2019:
 ```
   "you": {
     "body": [{
