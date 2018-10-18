@@ -54,6 +54,14 @@ paths:
       responses:
         default:
           description: "Response ignored"
+  /ping:
+    post:
+      summary: "To check if your snake is alive"
+      tags:
+        - webhooks
+      responses:
+        default:
+          description: "Response ignored"
 components:
   schemas:
     Coords:
