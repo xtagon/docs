@@ -40,6 +40,15 @@ JQ is a command line utility for interacting with the JSON format.
 brew install jq
 ```
 
+--- 
+
+### 1.4 Install Wget
+wget is a command line utility for getting the web.
+
+```
+brew install wget
+```
+
 ## Step 2 - Install NodeJS
 
 NodeJS is the programming language we will use build our snake.
