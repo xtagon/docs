@@ -73,8 +73,6 @@ The move request JSON has be adjusted and will take the most effort to account f
 
 The major changes are as follows:
 
-* The dead snakes are no longer removed from the `snakes`. If you wish to use logic based on other (living) snakes you must first determine the snakes status by looking its health in the `snakes` object.
-
 * The `data` and `object` properties has been removed from all points in the JSON. For example a comparison of the body coords were as follows:
 
 2018:
