@@ -10,7 +10,7 @@ The following sets up useful utilities and tools to help us in our snake journey
 
 Open a terminal.
 
---- 
+---
 
 ### 1.1 Install Git
 Git is a version command tool to allow us to check out the NodeJS starter snake from Github.com
@@ -19,7 +19,7 @@ Git is a version command tool to allow us to check out the NodeJS starter snake 
 sudo apt install git -y
 ```
 
---- 
+---
 
 ### 1.2 Install Jq
 JQ is a command line utility for interacting with the JSON format.
@@ -27,7 +27,7 @@ JQ is a command line utility for interacting with the JSON format.
 ```
 sudo apt install jq -y
 ```
---- 
+---
 
 ### 1.2 Install curl
 Curl for connecting and downloading things from the Internet.
@@ -77,7 +77,7 @@ Of course, we don't yet have a snake to test and that is what the next step is a
 ## Step 4 - Run your snake
 
 ### 4.1 - Download the NodeJS starter snake
-Starter snakes are housed in a version control system on github.com. You don't need a github account to download the 
+Starter snakes are housed in a version control system on github.com. You don't need a github account to download the
 snake.
 
 Lets download it with the git command:
@@ -86,7 +86,7 @@ Lets download it with the git command:
 git clone git://github.com/battlesnakeio/starter-snake-node.git
 ```
 
-The snake will now exist in a directroy called `starter-snake-node`
+The snake will now exist in a directory called `starter-snake-node`
 ---
 
 ### 4.2 - Install the snake's dependencies
@@ -107,12 +107,12 @@ The command `nodemon` means that if you modify any files the snake will reload w
 
 Your snake is now running on localhost port 9001.  (http://localhost:9001)
 
-If you go back to the engine browser page you can add your snake and see it go up directly into a wall and die by pasting 
+If you go back to the engine browser page you can add your snake and see it go up directly into a wall and die by pasting
 in the snake url of `http://localhost:9001` and clicking Start Game.
 
 ## Step 5 - Make your snake smart
-Now you can open up your snake code and start playing around with it to make it do something more exciting than hitting a 
-wall.  
+Now you can open up your snake code and start playing around with it to make it do something more exciting than hitting a
+wall.
 
 Open up the index.js file in the starter-snake-node directory and see what you can get it to do.  Every time you save
 this file, your snake will reload and you can watch the new behaviour in the engine based browser from step 3.
