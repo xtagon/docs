@@ -22,7 +22,7 @@ Windows 7
 
 - Open a terminal on your windows machine by cilcking the start menu and typing 'power' and choosing `Windows PowerShell`
 
-Copy & paste the following command to install a package manager called Brew onto your computer.
+Copy & paste the following command to install a package manager called Chocolately onto your computer.
 
 ```bash
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
