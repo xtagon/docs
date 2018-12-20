@@ -1,3 +1,4 @@
+---
 # Ladder
 
 Enter your snake into the ladder to see how well you do against the community.
