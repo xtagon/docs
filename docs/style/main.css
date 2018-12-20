@@ -1,0 +1,10 @@
+.wrapper {
+    width: auto;
+}
+section {
+    width: auto;
+    margin-left: 310px;
+}
+.highlight {
+    white-space: pre-wrap;
+}
