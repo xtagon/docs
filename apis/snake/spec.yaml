@@ -56,7 +56,7 @@ paths:
           description: "Response ignored"
   /ping:
     post:
-      summary: "To check if your snake is alive"
+      summary: "A heartbeat call to check if your snake server is running"
       tags:
         - webhooks
       responses:
