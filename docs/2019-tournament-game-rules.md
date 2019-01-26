@@ -31,7 +31,14 @@ only positions 1 and 2 will be filled.
 ```
 
 ## Food Spawn Rules
-TBD
+
+- The amount of food on a board will be set at the beginning of a game.  
+- You will not know how much food will be on the board before the game, however it is guaranteed that the amount of food will be at least 1.
+- The same amount of food will remain on the board at all times.  That is, if a piece of food is eaten by a snake, a 
+new piece of food will be available on the board in the next turn.
+- Food will spawn at random coordinates*
+
+\* There may be, or may not be, additional logic added before the tournament, to prevent food from apearing directly in front of a snake.
 
 ## Turn Mechanics
 1. The engine randomly appoints a snake to a starting position from the eight predetermined starting points.  (See Starting Positions) 
