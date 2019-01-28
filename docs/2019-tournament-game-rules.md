@@ -1,6 +1,8 @@
 # Tournament Game Rules
 This document sets out the game rules for the tournament battles.
 
+Please note, that we reserve the right to change game rules up until the day of the tournament.
+
 ## Board Rules
 - Boards will always be square.
 - Boards will be either small (7x7), medium (11x11) or large (19x19)
