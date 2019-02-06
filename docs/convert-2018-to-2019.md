@@ -4,24 +4,13 @@ The goal of this guide is to detail the differences from the previous year so on
 
 ## General Notes
 
-At the point in time of the writing of this doc the engine does not deal with taunts, user selected head/tail shapes or a profile picture. Some if not all of this functionality should be reincorporated later in the development process. Including them in your response objects shouldn't (fingers crossed) harm anything. 
-
-## Engine/Rule Changes
-
-In previous years the check for death occurred after the snake movements have been implemented. In 2019 the new order is:
-
-1. Grow Head
-2. Check for Death
-3. Check for Eating Food
-* If no eating occurred, remove tail.
-
-Due to this the act of moving into a space currently occupied by the tip of a snake's tail will result in a collision and DEATH :skull:, in previous years that spot would have been vacated and therefore safe (unless that snake had eaten).
+At the point in time of the writing of this doc the engine does not deal with taunts, user selected head/tail shapes or a profile picture. Some if not all of this functionality should be reincorporated later in the development process. Including them in your response objects shouldn't (fingers crossed) harm anything.
 
 ## Route Request/Response Changes
 
 ## /start POST
 
-Primary focus of the /start post route is to return a 200 code indicating your snake is ready to play. Currently the response body only will take a (optional) color key-value pair. 
+Primary focus of the /start post route is to return a 200 code indicating your snake is ready to play. Currently the response body only will take a (optional) color key-value pair.
 
 ```
 Response
@@ -73,9 +62,10 @@ The move request JSON has be adjusted and will take the most effort to account f
 
 The major changes are as follows:
 
-* The `data` and `object` properties has been removed from all points in the JSON. For example a comparison of the body coords were as follows:
+- The `data` and `object` properties has been removed from all points in the JSON. For example a comparison of the body coords were as follows:
 
 2018:
+
 ```
   "you": {
     "body": {
@@ -88,7 +78,9 @@ The major changes are as follows:
       "object": "list"
     }
 ```
+
 2019:
+
 ```
   "you": {
     "body": [{
@@ -97,13 +89,14 @@ The major changes are as follows:
     }]
   }
 ```
+
 In general any use of the `data` key can be removed, with its children keys moved up a level.
 
-* Removal of the `length` property for snakes. This value can instead be accessed by finding the length of the `body` array.
+- Removal of the `length` property for snakes. This value can instead be accessed by finding the length of the `body` array.
 
-* The board height and width, along with the food and snakes data have been moved under the `board` property. 
+- The board height and width, along with the food and snakes data have been moved under the `board` property.
 
-* The game id is now found under the `game` property.
+- The game id is now found under the `game` property.
 
 ### Response JSON
 

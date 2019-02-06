@@ -8,7 +8,7 @@ paths:
     post:
       summary: "Signal start of a new game"
       tags:
-        - webhooks
+        - endpoints
       requestBody:
         required: true
         content:
@@ -26,7 +26,7 @@ paths:
     post:
       summary: "Take a turn within a game"
       tags:
-        - webhooks
+        - endpoints
       requestBody:
         required: true
         content:
@@ -44,7 +44,7 @@ paths:
     post:
       summary: "Signal end of a game"
       tags:
-        - webhooks
+        - endpoints
       requestBody:
         required: true
         content:
@@ -56,12 +56,12 @@ paths:
           description: "Response ignored"
   /ping:
     post:
-      summary: "To check if your snake is alive"
+      summary: "A heartbeat call to check if your snake server is running"
       tags:
-        - webhooks
+        - endpoints
       responses:
-        default:
-          description: "Response ignored"
+        "200":
+          description: "Response code is required, but body is ignored"
 components:
   schemas:
     Coords:

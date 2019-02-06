@@ -1,6 +1,8 @@
 # Tournament Game Rules
 This document sets out the game rules for the tournament battles.
 
+Please note, that we reserve the right to change game rules up until the day of the tournament.
+
 ## Board Rules
 - Boards will always be square.
 - Boards will be either small (7x7), medium (11x11) or large (19x19)
@@ -31,7 +33,14 @@ only positions 1 and 2 will be filled.
 ```
 
 ## Food Spawn Rules
-TBD
+
+- The amount of food on a board will be set at the beginning of a game.  
+- You will not know how much food will be on the board before the game, however it is guaranteed that the amount of food will be at least 1.
+- The same amount of food will remain on the board at all times.  That is, if a piece of food is eaten by a snake, a 
+new piece of food will be available on the board in the next turn.
+- Food will spawn at random coordinates*
+
+\* There may be, or may not be, additional logic added before the tournament, to prevent food from apearing directly in front of a snake.
 
 ## Turn Mechanics
 1. The engine randomly appoints a snake to a starting position from the eight predetermined starting points.  (See Starting Positions) 
@@ -66,7 +75,7 @@ Snakes can die in a variety of ways.
 
 ## General Tournament Rules
 - Each team may only enter 1 snake into the tournament.
-- Snakes must be healthy to be entered into a game.  A healthy snake is one that responds to 90% of /ping requests from the start time of the tournament.  Unhealthy snakes get cut from the competition.
+- Snakes should be healthy.  A healthy snake is one that responds to `/ping` requests.
 
 ### Divisions
 - There are three divisions in the battlesnake tournament.  Beginner, Intermediate, Advanced.
