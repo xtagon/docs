@@ -1,3 +1,9 @@
+---
+layout: default
+title: Zero to Snake for Linux
+categories: [doc]
+---
+
 # Zero to snake for Linux
 
 This document takes you from a blank Ubuntu computer to a running snake that you can view in your browser.
@@ -6,6 +12,7 @@ The programming language used in this document is NodeJS a JavaScript based lang
 These steps are only validated on Google Chrome, so please download and use that as your browser.
 
 ## Step 1 - Environment setup
+
 The following sets up useful utilities and tools to help us in our snake journey.
 
 Open a terminal.
@@ -13,6 +20,7 @@ Open a terminal.
 ---
 
 ### 1.1 Install Git
+
 Git is a version command tool to allow us to check out the NodeJS starter snake from Github.com
 
 ```bash
@@ -22,14 +30,17 @@ sudo apt install git -y
 ---
 
 ### 1.2 Install Jq
+
 JQ is a command line utility for interacting with the JSON format.
 
 ```
 sudo apt install jq -y
 ```
+
 ---
 
 ### 1.2 Install curl
+
 Curl for connecting and downloading things from the Internet.
 
 ```
@@ -46,6 +57,7 @@ sudo apt install npm -y
 ```
 
 ## Step 3 - Run the Engine
+
 The engine is the piece of software that talks to your snake and asks it what moves to make next based on the current
 state of the game.  It also comes pre-packaged with a UI to see your snake running.
 
@@ -62,6 +74,7 @@ wget -qO- `curl -s https://api.github.com/repos/battlesnakeio/engine/releases/la
 ---
 
 ### 3.2 Run the engine in dev mode
+
 Dev mode means that the engine will run a simple browser application that you can connect to your snake.
 
 ```bash
@@ -77,6 +90,7 @@ Of course, we don't yet have a snake to test and that is what the next step is a
 ## Step 4 - Run your snake
 
 ### 4.1 - Download the NodeJS starter snake
+
 Starter snakes are housed in a version control system on github.com. You don't need a github account to download the
 snake.
 
@@ -87,6 +101,7 @@ git clone git://github.com/battlesnakeio/starter-snake-node.git
 ```
 
 The snake will now exist in a directory called `starter-snake-node`
+
 ---
 
 ### 4.2 - Install the snake's dependencies
@@ -111,6 +126,7 @@ If you go back to the engine browser page you can add your snake and see it go u
 in the snake url of `http://localhost:9001` and clicking Start Game.
 
 ## Step 5 - Make your snake smart
+
 Now you can open up your snake code and start playing around with it to make it do something more exciting than hitting a
 wall.
 
@@ -118,4 +134,5 @@ Open up the index.js file in the starter-snake-node directory and see what you c
 this file, your snake will reload and you can watch the new behaviour in the engine based browser from step 3.
 
 ## Step 6 - Deploy it to the Internet
+
 Have a look at the `README.md` file in your starter-snake-node directory for instructions on deploying to Heroku.

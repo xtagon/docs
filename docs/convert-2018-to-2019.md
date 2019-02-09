@@ -1,3 +1,9 @@
+---
+layout: default
+title: Battlesnake 2018 to 2019 Conversion Guide
+categories: [doc]
+---
+
 # Battlesnake 2018 to 2019 Conversion Guide
 
 The goal of this guide is to detail the differences from the previous year so one knows what to do to convert a 2018 Battlesnake to work in the 2019 engine. Due to the nature of Battlesnake that will mean adjusting how your snake deals with the various post routes on your server.

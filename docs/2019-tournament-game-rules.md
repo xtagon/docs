@@ -1,3 +1,9 @@
+---
+layout: default
+title: 2019 Tournament Game Rules
+categories: [doc]
+---
+
 # Tournament Game Rules
 This document sets out the game rules for the tournament battles.
 
@@ -9,47 +15,47 @@ Please note, that we reserve the right to change game rules up until the day of 
 - A minimum of 2 snakes can be put on a board.
 - A maximum of 8 snakes can be put on a board.
 - Starting positions are predetermined to put snakes as far away from each other and 1 square away from walls.
-- Starting positions are randomly assigned to a snake from the available numbers as shown below.  The numbers 
-illustrate the way in which the board will be filled with snakes.  For example, if there are only two snakes in the battle, 
+- Starting positions are randomly assigned to a snake from the available numbers as shown below.  The numbers
+illustrate the way in which the board will be filled with snakes.  For example, if there are only two snakes in the battle,
 only positions 1 and 2 will be filled.
 
 ### Illustrative Starting Positions (7x7 board)
-``` 
+```
 -----------------------------
-|   |   |   |   |   |   |   | 
+|   |   |   |   |   |   |   |
 -----------------------------
-|   | 1 |   | 5 |   | 4 |   | 
+|   | 1 |   | 5 |   | 4 |   |
 -----------------------------
-|   |   |   |   |   |   |   | 
+|   |   |   |   |   |   |   |
 -----------------------------
-|   | 8 |   |   |   | 6 |   | 
+|   | 8 |   |   |   | 6 |   |
 -----------------------------
-|   |   |   |   |   |   |   | 
+|   |   |   |   |   |   |   |
 -----------------------------
-|   | 3 |   | 7 |   | 2 |   | 
+|   | 3 |   | 7 |   | 2 |   |
 -----------------------------
-|   |   |   |   |   |   |   | 
+|   |   |   |   |   |   |   |
 -----------------------------
 ```
 
 ## Food Spawn Rules
 
-- The amount of food on a board will be set at the beginning of a game.  
+- The amount of food on a board will be set at the beginning of a game.
 - You will not know how much food will be on the board before the game, however it is guaranteed that the amount of food will be at least 1.
-- The same amount of food will remain on the board at all times.  That is, if a piece of food is eaten by a snake, a 
+- The same amount of food will remain on the board at all times.  That is, if a piece of food is eaten by a snake, a
 new piece of food will be available on the board in the next turn.
 - Food will spawn at random coordinates*
 
 \* There may be, or may not be, additional logic added before the tournament, to prevent food from apearing directly in front of a snake.
 
 ## Turn Mechanics
-1. The engine randomly appoints a snake to a starting position from the eight predetermined starting points.  (See Starting Positions) 
+1. The engine randomly appoints a snake to a starting position from the eight predetermined starting points.  (See Starting Positions)
 1. Each snake is sent a /start request with the board, food, and snake information. (SnakeRequest).
-   - Each snake is required to respond with a StartResponse.  
+   - Each snake is required to respond with a StartResponse.
    - Snakes that do not respond within 1 second to the start request are considered dead.
 3. Each snake, in parallel, is sent a /move request with the board, food and snake information. (SnakeRequest).
-   - Each snake is required to respond with a MoveResponse.  
-   - Snakes that do not respond within 500ms to the move request will continue to move in the same direction as their last move.  
+   - Each snake is required to respond with a MoveResponse.
+   - Snakes that do not respond within 500ms to the move request will continue to move in the same direction as their last move.
    - If this is the first move and there is no response from the snake, the direction will default to up.
 1. After all the snakes have returned their move decision the engine will, for each snake,
    - Move head by adding a new body part at the start of the body array in the move direction
@@ -63,7 +69,7 @@ new piece of food will be available on the board in the next turn.
 1. If there is a single snake alive send the /end request to it.
 
 ## Snake Deaths
-Snakes can die in a variety of ways. 
+Snakes can die in a variety of ways.
 
 - Wall collision. You hit a wall.  Try turning.
 - Snake self-collision. You hit yourself. Try turning less.
@@ -99,7 +105,7 @@ TBD
 
 ### Beginner/Intermediate/Advanced Tournament Finals
 Once there is a game with only 1 group the last round has been reached and this is the final.
-- The final is four games.  
+- The final is four games.
 - The winners of games 1, 2 and 3 go through to the fourth game.
 - The three snakes that made it through to game four compete for 1st, 2nd and 3rd place.
 - If any two snakes die on the same turn, the winner is the longer snake.
@@ -107,6 +113,6 @@ Once there is a game with only 1 group the last round has been reached and this 
 
 ## Technical Rules and Considerations
 The following section details some special cases that you should be aware of for the tournament.
-- Your snake may have simultaneous games running against it. 
+- Your snake may have simultaneous games running against it.
 - Your snake must implement the `/ping` endpoint to enter into the competition.  Snakes that are not responding to `/ping` will be removed from the competition.
 - It is the snake authors responsibility to ensure that your snakes can handle long pauses, maybe up to minutes at a time.

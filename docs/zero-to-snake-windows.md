@@ -1,3 +1,9 @@
+---
+layout: default
+title: Zero to snake for Windows
+categories: [doc]
+---
+
 # Zero to snake for Windows
 
 This document will allow you to start developing a Battlesnake snake AI on a Windows 10/8/7 computer.
@@ -49,6 +55,8 @@ Go to <https://github.com/battlesnakeio/engine/releases/latest> and download the
 
 Once downloaded, open Windows Explorer and navigate to your Downloads folder. Right-click and extract the downloaded ZIP file, then move the contents of the extracted folder into the directory created above.
 
+---
+
 ### 3.2 Run the Engine
 
 Engine has a "dev" mode allows you to access a development environment that runs completely local to your machine. Running the Engine in this way allows you to make quick iterations to your snake before putting it up on <https://play.battlesnake.io>.
@@ -77,12 +85,16 @@ git clone git://github.com/battlesnakeio/starter-snake-node.git
 
 The NodeJS starter snake will now exist in a directory called `starter-snake-node`.
 
+---
+
 ### 4.2 - Install dependencies
 
 ```cmd
 cd starter-snake-node
 npm install
 ```
+
+---
 
 ### 4.3 - Run the snake
 
