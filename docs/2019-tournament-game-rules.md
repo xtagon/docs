@@ -52,10 +52,10 @@ Please note, that we reserve the right to change game rules up until the day of 
 1. The engine randomly appoints a snake to a starting position from the eight predetermined starting points.  (See Starting Positions)
 1. Each snake is sent a /start request with the board, food, and snake information. (SnakeRequest).
    - Each snake is required to respond with a StartResponse.
-   - Snakes that do not respond within 1 second to the start request are considered dead.
+   - Snakes have 250ms to respond, snakes that don't respond get a random colour.
 1. Each snake, in parallel, is sent a /move request with the board, food and snake information. (SnakeRequest).
    - Each snake is required to respond with a MoveResponse.
-   - Snakes that do not respond within 500ms to the move request will continue to move in the same direction as their last move.
+   - Snakes that do not respond within 250ms to the move request will continue to move in the same direction as their last move.
    - If this is the first move and there is no response from the snake, the direction will default to up.
 1. After all the snakes have returned their move decision the engine will, for each snake,
    - Move head by adding a new body part at the start of the body array in the move direction
