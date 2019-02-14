@@ -108,6 +108,7 @@ components:
           items:
             $ref: "#/components/schemas/Coords"
         snakes:
+          description: A list of snakes that are still alive
           type: array
           items:
             $ref: "#/components/schemas/Snake"
