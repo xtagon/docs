@@ -137,6 +137,12 @@ components:
         color:
           type: string
           example: "#ff00ff"
+        headType
+          type: string
+          example: "bendr"
+        tailType
+          type: string
+          example: "pixel"
     MoveResponse:
       type: object
       required:
