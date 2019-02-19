@@ -4,6 +4,9 @@ title: 2019 Tournament Game Rules
 categories: [doc]
 ---
 
+| All rules for the [Victoria 2019 tournament](https://events.battlesnake.io/tournament) will be subject to change up until March 2nd |
+| --- |
+
 # Tournament Game Rules
 
 This document sets out the game rules for the tournament battles.
