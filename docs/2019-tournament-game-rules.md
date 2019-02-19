@@ -61,9 +61,10 @@ Please note, that we reserve the right to change game rules up until the day of 
    - Move head by adding a new body part at the start of the body array in the move direction
    - Reduce health
    - Check if the snake ate and adjust health
-   - For any snake that did not eat, remove the final body segment
+   - Remove the final body segment
+   - If the snake ate this turn, add a new body segment, underneath the current tail, this will cause the snake to grow on the following turn.
    - Check for snake death (see Snake Deaths)
-   - Add new food for any food that was eaten
+   - Check if food needs to be spawned. (see Food Spawn Rules)
 1. Dead snakes are sent the /end request.
 1. If there are two or more snakes alive, go to step 3.
 1. If there is a single snake alive send the /end request to it.
