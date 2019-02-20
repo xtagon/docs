@@ -16,13 +16,6 @@
       section {
         font-size: 18px;
       }
-      pre {
-        white-space: pre-wrap;
-        padding: 5px;
-        background-color: #efefef;
-        padding-left: 15px;
-        line-height: 1.1em;
-      }
       h1, h2 {
         font-weight: bold;
       }
@@ -45,87 +38,75 @@
   </head>
   <body class="overlay-menu layout-fixed">
     <!-- CONTENT WRAPPER -->
-    <div id="app">
-      <div class="content-wrapper">
-        <!-- TOP TOOLBAR WRAPPER -->
-        <nav class="top-toolbar navbar navbar-mobile navbar-tablet">
-          <ul class="navbar-nav nav-left">
-            <li class="nav-item">
-              <a href="javascript:void(0)" data-toggle-state="aside-left-open">
-                <i class="icon dripicons-align-left"></i>
-              </a>
-            </li>
-          </ul>
-          <ul class="navbar-nav nav-center site-logo">
-            <li>
-              <a href="/">
-                <span class="brand-text">Battlesnake</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="navbar-nav nav-right">
-            <li class="nav-item">
-              <a
-                href="javascript:void(0)"
-                data-toggle-state="mobile-topbar-toggle"
-              >
-                <i class="icon dripicons-dots-3 rotate-90"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="top-toolbar navbar navbar-desktop flex-nowrap">
-          <ul class="site-logo">
-            <li>
-              <!-- START LOGO -->
-              <a href="/">
-                <span class="brand-text">Battlesnake Docs</span>
-              </a>
-              <!-- END LOGO -->
-            </li>
-          </ul>
-        </nav>
-        <!-- END TOP TOOLBAR WRAPPER -->
-        <div class="content page-aside-right" style="height: 100vh !important;" >
-          <div class="main-content">
-            <section class="page-content container-fluid">
-              <div class="row">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      {{ content }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <aside class="aside-right">
-            <div class="card">
-              <div class="card-body">                
-                <ul class="nav sub-nav v-sub-nav flex-column p-b-30">
-                    <li class="nav-header">Getting Started</li>
-                    <li class="nav-item"><a class="nav-link" href="zero-to-snake-macos.html">Snake Tutorial (js) - MacOS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="zero-to-snake-linux.html">Snake Tutorial (js) - Linux</a></li>
-                    <li class="nav-item"><a class="nav-link" href="zero-to-snake-windows.html">Snake Tutorial (js) - Windows</a></li>
-                    <li class="nav-item"><a class="nav-link" href="zero-to-python-snake-windows.html">Snake Tutorial (python) - Windows</a></li>
-                    <li class="nav-item"><a class="nav-link" href="zero-to-snake-windows-chocolatey.html">Snake Tutorial (js) - Windows (chocolatey)</a></li>
-                    <li class="nav-header">Development</li>
-                    <li class="nav-item"><a class="nav-link" href="snake-api.html" target="_blank">Snake API</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/battlesnakeio/community/blob/master/starter-snakes.md" target="_blank">Starter Snakes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="convert-2018-to-2019.html">2018 -> 2019 Conversion</a></li>
-                    <li class="nav-header">Tournament</li>
-                    <li class="nav-item"><a class="nav-link" href="2019-tournament-game-rules.html">2019 Tournament Rules</a></li>
-                    <li class="nav-item"><a class="nav-link" href="http://battlesnake.io">Event Details</a></li>
-                </ul>
-              </div>
-            </div>
-          </aside>
+    <div class="content-wrapper">
+      <!-- TOP TOOLBAR WRAPPER -->
+      <nav class="top-toolbar navbar navbar-mobile navbar-tablet">
+        <ul class="navbar-nav nav-left">
+          <li class="nav-item">
+            <a href="javascript:void(0)" data-toggle-state="aside-left-open">
+              <i class="icon dripicons-align-left"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-center site-logo">
+          <li>
+            <a href="/">
+              <span class="brand-text">Battlesnake</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-right">
+          <li class="nav-item">
+            <a
+              href="javascript:void(0)"
+              data-toggle-state="mobile-topbar-toggle"
+            >
+              <i class="icon dripicons-dots-3 rotate-90"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="top-toolbar navbar navbar-desktop flex-nowrap">
+        <ul class="site-logo">
+          <li>
+            <!-- START LOGO -->
+            <a href="/">
+              <span class="brand-text">Battlesnake Docs</span>
+            </a>
+            <!-- END LOGO -->
+          </li>
+        </ul>
+      </nav>
+      <!-- END TOP TOOLBAR WRAPPER -->
+      <div class="content page-aside-right" style="height: 100vh !important;" >
+        <div class="main-content">
+          {{ content }}
         </div>
+        <aside class="aside-right">
+          <div class="card">
+            <div class="card-body">
+              <ul class="nav sub-nav v-sub-nav flex-column p-b-30">
+                <li class="nav-header">Getting Started</li>
+                <li class="nav-item"><a class="nav-link" href="zero-to-snake-macos.html">Snake Tutorial (js) - MacOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="zero-to-snake-linux.html">Snake Tutorial (js) - Linux</a></li>
+                <li class="nav-item"><a class="nav-link" href="zero-to-snake-windows.html">Snake Tutorial (js) - Windows</a></li>
+                <li class="nav-item"><a class="nav-link" href="zero-to-python-snake-windows.html">Snake Tutorial (python) - Windows</a></li>
+                <li class="nav-item"><a class="nav-link" href="zero-to-snake-windows-chocolatey.html">Snake Tutorial (js) - Windows (chocolatey)</a></li>
+                <li class="nav-header">Development</li>
+                <li class="nav-item"><a class="nav-link" href="snake-api.html" target="_blank">Snake API</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/battlesnakeio/community/blob/master/starter-snakes.md" target="_blank">Starter Snakes</a></li>
+                <li class="nav-item"><a class="nav-link" href="convert-2018-to-2019.html">2018 -> 2019 Conversion</a></li>
+                <li class="nav-header">Tournament</li>
+                <li class="nav-item"><a class="nav-link" href="2019-tournament-game-rules.html">2019 Tournament Rules</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://battlesnake.io">Event Details</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
     <!-- END CONTENT WRAPPER -->
-    
+
     {% if site.google_analytics %}
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -136,5 +117,10 @@
     ga('send', 'pageview');
     </script>
     {% endif %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js" integrity="sha256-sNPiigbfSkqUzMc5rgrdztLnneCMAp6W9wetJUZu9Zw=" crossorigin="anonymous"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
   </body>
 </html>
