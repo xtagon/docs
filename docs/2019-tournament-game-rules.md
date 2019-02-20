@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: card
 title: 2019 Tournament Game Rules
 categories: [doc]
 ---
 
-| All rules for the [Victoria 2019 tournament](https://events.battlesnake.io/tournament) will be subject to change up until March 2nd |
-| --- |
+<div class="alert alert-warning show" role="alert">
+  All rules for the <a href="https://events.battlesnake.io/tournament">Victoria 2019 tournament</a> will be subject to change up until March 2nd
+</div>
 
 # Tournament Game Rules
 

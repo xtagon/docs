@@ -4,8 +4,6 @@ title: Zero to snake for Windows
 categories: [doc]
 ---
 
-# Zero to snake for Windows
-
 This document will allow you to start developing a Battlesnake snake AI on a Windows 10/8/7 computer.
 
 JavaScript is the language we will use build our snake and NodeJS is the runtime that is used to execute server-side JS code to run the snake server.
