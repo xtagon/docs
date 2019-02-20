@@ -4,8 +4,6 @@ title: Zero to Snake for macOS
 categories: [doc]
 ---
 
-# Zero to snake for MacOS
-
 This document takes you from a blank MacOS computer to a running snake that you can view in your browser.
 The programming language used in this document is NodeJS a JavaScript based language.
 

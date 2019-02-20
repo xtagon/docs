@@ -4,8 +4,6 @@ title: Zero to snake for Windows (using Chocolatey)
 categories: [doc]
 ---
 
-# Zero to snake for Windows (using Chocolatey)
-
 This document takes you from a blank Windows 10/8/7 computer to a running snake that you can view in your browser.
 The programming language used in this document is NodeJS, a JavaScript based language.
 

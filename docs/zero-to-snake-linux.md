@@ -4,8 +4,6 @@ title: Zero to Snake for Linux
 categories: [doc]
 ---
 
-# Zero to snake for Linux
-
 This document takes you from a blank Ubuntu computer to a running snake that you can view in your browser.
 The programming language used in this document is NodeJS a JavaScript based language.
 
