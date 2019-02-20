@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: card
 title: Zero to snake for Windows
 categories: [doc]
 ---

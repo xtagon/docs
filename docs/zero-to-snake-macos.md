@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Zero to Snake for MacOS
+layout: card
+title: Zero to Snake for macOS
 categories: [doc]
 ---
 

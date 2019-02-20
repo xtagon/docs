@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: card
 title: Zero to Snake for Linux
 categories: [doc]
 ---

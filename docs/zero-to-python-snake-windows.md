@@ -1,3 +1,9 @@
+---
+layout: card
+title: Zero to Snake for Windows
+categories: [doc]
+---
+
 # Zero to Snake for Windows (with Python)
 
 This document will allow you to start developing a Battlesnake snake AI on a Windows 10/8/7 computer using the Python programming language.

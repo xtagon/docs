@@ -1,7 +1,75 @@
 ---
-layout: default
-title: Home
+layout: page
+title: Battlesnake Docs
 ---
 
-<h2>Welcome to the Battlesnake Docs</h2>
-<p>Please select a document from the right hand navigation</p>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="offset-2 col-4">
+            <h2>Your snake receives JSON game data</h2>
+            <pre class="m-0">
+<code class="p-20 json">{
+  "game": {
+    "id": "game-id-string"
+  },
+  "turn": 1,
+  "board": {
+    "height": 11,
+    "width": 11,
+    "food": [{
+      "x": 1,
+      "y": 3
+    }],
+    "snakes": [{
+      "id": "snake-id-string",
+      "name": "Sneky Snek",
+      "health": 100,
+      "body": [{
+        "x": 1,
+        "y": 3
+      }]
+    }]
+  },
+  "you": {
+    "id": "snake-id-string",
+    "name": "Sneky Snek",
+    "health": 100,
+    "body": [{
+      "x": 1,
+      "y": 3
+    }]
+  }
+}</code>
+            </pre>
+          </div>
+
+          <div class="col-4">
+            <h2>...and your code returns your move</h2>
+            <pre class="m-0">
+<code class="p-20 python">import bottle
+import json
+import random
+from bottle import HTTPResponse
+
+@bottle.post('/move')
+def move():
+    data = bottle.request.json
+
+    # Do some simple or complex processing here
+    # of the data given the board state,
+    # and return your snake direction!
+
+    directions = ['up', 'down', 'left', 'right']
+    move = random.choice(directions)
+
+    return {"move": move}</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
