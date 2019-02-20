@@ -1,6 +1,6 @@
 ---
 layout: card
-title: Zero to snake for Windows (using Chocolatey)
+title: Zero to Snake for Windows (using Chocolatey)
 categories: [doc]
 ---
 
