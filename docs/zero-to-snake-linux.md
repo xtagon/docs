@@ -123,6 +123,8 @@ Your snake is now running on localhost port 9001.  (http://localhost:9001)
 If you go back to the engine browser page you can add your snake and see it go up directly into a wall and die by pasting
 in the snake url of `http://localhost:9001` and clicking Start Game.
 
+After you start the game, the board will be displayed. Use the arrow keys to advance forward or backward one turn at a time, or press Enter/Return to play the game to the end. If the keyboard shortcuts don't work, click the board once to make sure it has focus and try again.
+
 ## Step 5 - Make your snake smart
 
 Now you can open up your snake code and start playing around with it to make it do something more exciting than hitting a
