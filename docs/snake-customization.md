@@ -5,29 +5,43 @@ categories: [doc]
 ---
 
 
-Make your snake unique by assigning it a color, head, and tail as part of your response to the Battlesnake API's `start` request. Read more about the `start` endpoint on our [API Docs here](https://docs.battlesnake.io/snake-api.html#tag/endpoints/paths/~1start/post)
+Make your snake unique by assigning it a color, head, and tail in your response to the Battlesnake API's `start` request. 
 
-### Example response to POST /start
+### A response to start with these specifications:
 
 ```
 {
 	"color": "#736CCB",
 	"headType": "beluga",
-	"tailType": "sharp"
+	"tailType": "curled"
 }
 ```
+#### Will customize your snake like this!
+
+<div class="row p-10">
+	<svg class="align-self-center ml-3 mr-1 w-40" fill="#736CCB" style="transform:rotateY(180deg);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	    <path d="M23 48c2 12 2 26 4 26 0 0-2 0 0 0s1-19-1-28c-1-10-2-19-1-28S31 1 42 0c10-1 19 5 25 12 5 7 7 11 8 21l1 12c0 3-2 17-1 21 1 5 8 7 8 7 8 3 16-1 17 1 0 2-3 5-8 6-11 3-24 6-30-4-4-8-2-18-2-26-1-9-1-20-6-28-2-3-6-5-9-4s-2 4-2 6c0 20 9 42 2 61-4 8-11 16-21 15l-4-1-2-1c-3-2-6-2-9-2-4 1-5 4-9 4V0c17 2 22 38 23 48z"/>
+	</svg>
+	<svg class="align-self-center mr-1 w-40" fill="#736CCB" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	    <path d="M0 0h100v100H0z"/>
+	</svg>
+	<svg class="align-self-center w-40" fill="#736CCB" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	  <path d="M0 100h56L32 88l-5-14 73 2-10-48L50 0H0zm23-61a9 9 0 1 1-10 10 9 9 0 0 1 10-10z"/>
+	</svg>
+</div>
+
 
 ---
 
-## Color
+## Assign a Color
 
-Specify a `color` for a snake using any HEX code (like this: `#736CCB`).
+Specify the `color` for a snake using a HEX code (like this: `#736CCB`).
 
 ---
 
-## Heads and Tails
+## Choose a head and tail
 
-Choose a head and tail for your snake by passing the names in as the `headType` and `tailType`. If you do not specify a head or tail type the "regular" versions will be used.
+Find your favorite snake head and tail from the options below and use the name in the parameters `headType` and `tailType`. If you do not specify a head or tail type the "regular" version will be used. 
 
 <div class="row">
 	<div class="col-12 col-sm-5 p-25 card-body">
@@ -141,3 +155,7 @@ Choose a head and tail for your snake by passing the names in as the `headType` 
 		</ul>
 	</div>
 </div>
+
+### Futher Reading
+
+Check out the [Battlesnake API Docs](/snake-api.html) for more on information and examples on interacting with the Battlesnake API.
