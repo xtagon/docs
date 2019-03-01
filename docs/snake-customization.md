@@ -85,7 +85,7 @@ Find your favorite snake head and tail from the options below and use the name i
 			</li>
 			<li class="list-group-item d-flex align-items-center">
 				<img class="justify-self-start mr-2 w-40" src="/assets/images/snake/head/shades.svg" alt="shades snake head"/>
-				<p class=" font-size-16 m-0 pl-4 pl-sm-2 pl-md-4">hades</p>
+				<p class=" font-size-16 m-0 pl-4 pl-sm-2 pl-md-4">shades</p>
 			</li>
 			<li class="list-group-item d-flex align-items-center">
 				<img class="justify-self-start mr-2 w-40" src="/assets/images/snake/head/silly.svg" alt="silly snake head"/>
