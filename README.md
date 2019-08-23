@@ -1,3 +1,3 @@
 # Documentation
 
-Available at http://docs.battlesnake.io
+Available at https://docs.battlesnake.com
