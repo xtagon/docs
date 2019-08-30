@@ -1,0 +1,18 @@
+/* Icons next to text in top nav */
+.top-toolbar .nav-item.nav-text>a>i {
+    line-height: 2.5;
+    top: 4px;
+}
+
+/* List items in main sidebar */
+nav.main-menu ul.nav li>a {
+    padding-left: 30px;
+}
+body.content-menu .content-wrapper .sidebar-left .sidebar-content nav.main-menu ul.nav li.sidebar-header:not(:first-of-type) {
+    padding-top: 30px;
+}
+
+/* page headers */
+.page-header {
+    padding-top: 0px;
+}
