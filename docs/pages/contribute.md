@@ -1,7 +1,7 @@
 ---
-layout: card
 title: Get Involved
-categories: [doc]
+permalink: /contribute
+layout: card
 ---
 
 We believe in the power of collaboration to make products great, so we want your help! We've got documentation that needs writing, bugs that need squashing, UI that needs designing, and more! If you are interested in helping to make Battlesnake better, check out these resources:

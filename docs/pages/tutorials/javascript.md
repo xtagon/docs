@@ -1,10 +1,10 @@
 ---
+title: Writing Your First Snake in Javascript
+permalink: /tutorials/javascript
 layout: card
-title: Zero to Snake for macOS
-categories: [doc]
 ---
 
-This document takes you from a blank MacOS computer to a running snake that you can view in your browser.
+This document takes you from a blank Ubuntu computer to a running snake that you can view in your browser.
 The programming language used in this document is NodeJS a JavaScript based language.
 
 These steps are only validated on Google Chrome, so please download and use that as your browser.
@@ -13,49 +13,36 @@ These steps are only validated on Google Chrome, so please download and use that
 
 The following sets up useful utilities and tools to help us in our snake journey.
 
-### 1.1 Install Brew
-
-We want to install the brew package manager because it makes all the other things we want to do in step 1 much easier.
-
-Open a terminal on your mac by pressing `Command + Space` and typing in `terminal` and pressing enter.
-
-Copy & paste the following command to install a package manager called Brew onto your computer.
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-If you see any errors, stop and ask someone.  If this step doesn't work correctly nothing else will work right and you'll
-end up in a tangle. As a general rule, never copy & paste random commands into your terminal, it's very dangerous. :)
+Open a terminal.
 
 ---
 
-### 1.2 Install Git
+### 1.1 Install Git
 
 Git is a version command tool to allow us to check out the NodeJS starter snake from Github.com
 
 ```bash
-brew install git
+sudo apt install git -y
 ```
 
 ---
 
-### 1.3 Install Jq
+### 1.2 Install Jq
 
 JQ is a command line utility for interacting with the JSON format.
 
-```bash
-brew install jq
+```
+sudo apt install jq -y
 ```
 
 ---
 
-### 1.4 Install Wget
+### 1.2 Install curl
 
-wget is a command line utility for getting the web.
+Curl for connecting and downloading things from the Internet.
 
-```bash
-brew install wget
+```
+sudo apt install curl -y
 ```
 
 ## Step 2 - Install NodeJS
@@ -63,7 +50,8 @@ brew install wget
 NodeJS is the programming language we will use build our snake.
 
 ```bash
-brew install nodejs
+sudo apt install nodejs -y
+sudo apt install npm -y
 ```
 
 ## Step 3 - Run the Engine
@@ -77,8 +65,8 @@ state of the game.  It also comes pre-packaged with a UI to see your snake runni
 mkdir battlesnake-engine
 cd battlesnake-engine
 wget -qO- `curl -s https://api.github.com/repos/battlesnakeio/engine/releases/latest \
-    | jq -r ".assets[] | select(.name) | .browser_download_url" | grep Darwin | grep 64` \
-    | bsdtar -xvf-
+    | jq -r ".assets[] | select(.name) | .browser_download_url" | grep Linux | grep 64` \
+    | tar zxv
 ```
 
 ---
@@ -118,7 +106,7 @@ The snake will now exist in a directory called `starter-snake-node`
 
 ```bash
 cd starter-snake-node
-npm install -g nodemon
+sudo npm install -g nodemon
 npm install
 ```
 
@@ -134,6 +122,8 @@ Your snake is now running on localhost port 9001.  (http://localhost:9001)
 
 If you go back to the engine browser page you can add your snake and see it go up directly into a wall and die by pasting
 in the snake url of `http://localhost:9001` and clicking Start Game.
+
+After you start the game, the board will be displayed. Use the arrow keys to advance forward or backward one turn at a time, or press Enter/Return to play the game to the end. If the keyboard shortcuts don't work, click the board once to make sure it has focus and try again.
 
 ## Step 5 - Make your snake smart
 

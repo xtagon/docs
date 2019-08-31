@@ -1,7 +1,7 @@
 ---
+title: Writing Your First Snake in Go
+permalink: /tutorials/go
 layout: card
-title: Zero to Snake (with Go)
-categories: [doc]
 ---
 
 This document will allow you to start developing a Battlesnake snake AI using Golang programming language.

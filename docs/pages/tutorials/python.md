@@ -1,7 +1,7 @@
 ---
+title: Writing Your First Snake in Python
+permalink: /tutorials/python
 layout: card
-title: Zero to Snake for Windows (with Python)
-categories: [doc]
 ---
 
 This document will allow you to start developing a Battlesnake snake AI on a Windows 10/8/7 computer using the Python programming language.

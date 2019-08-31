@@ -15,8 +15,8 @@ git clone https://github.com/battlesnakeio/docs
 ```
 3. Install and run
 ```
-cd docs/docs
 bundle install
+cd docs
 bundle exec jekyll serve
 ```
 4. View it at http://localhost:4000

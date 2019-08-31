@@ -1,11 +1,10 @@
 ---
-layout: card
 title: Customizing Your Snake
-categories: [doc]
+permalink: /snake-customization
+layout: card
 ---
 
-
-Make your snake unique by assigning it a color, head, and tail in your response to the Battlesnake API's `start` request. 
+Make your snake unique by assigning it a color, head, and tail in your response to the Battlesnake API's `start` request.
 
 ### A response to start with these specifications:
 
@@ -41,7 +40,7 @@ Specify the `color` for your snake using a HEX code (like this: `#736CCB`). A ra
 
 ## Choose a head and tail
 
-Find your favorite snake head and tail from the options below and use the name in the parameters `headType` and `tailType`. If you do not specify a head or tail type the "regular" version will be used. 
+Find your favorite snake head and tail from the options below and use the name in the parameters `headType` and `tailType`. If you do not specify a head or tail type the "regular" version will be used.
 
 <div class="row">
 	<div class="col-12 col-sm-5 p-25 card-body">
