@@ -51,7 +51,7 @@ TODO
 
 ## Detailed Turn Mechanics
 
-This section details how the engine executes a turn, including the order and priority of operations. The Battlesnake Game Engine is open source, and implementation details can be viewed at [github.com/battlesnakeio/engine](https://github.com/battlesnakeio/enging).
+This section details how the engine executes a turn, including the order and priority of operations. The Battlesnake Game Engine is open source, and implementation details can be viewed at [github.com/battlesnakeio/engine](https://github.com/battlesnakeio/engine).
 
 On every turn of the game:
 
