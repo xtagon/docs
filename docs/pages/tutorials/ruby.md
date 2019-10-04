@@ -123,13 +123,13 @@ bundle install
 ### 4.3 - Run the snake
 
 ```bash
-foreman start web
+ruby app/app.rb
 ```
 
-Your snake is now running on localhost port 5000: [http://localhost:5000](http://localhost:5000)
+Your snake is now running on localhost port 4567: [http://localhost:4567](http://localhost:4567)
 
 If you go back to the engine browser page you can add your snake and see it go up directly into a wall and die by pasting
-in the snake url of `http://localhost:5000` and clicking Start Game.
+in the snake url of `http://localhost:4567` and clicking Start Game.
 
 After you start the game, the board will be displayed. Use the arrow keys to advance forward or backward one turn at a time, or press Enter/Return to play the game to the end. If the keyboard shortcuts don't work, click the board once to make sure it has focus and try again.
 
@@ -138,8 +138,8 @@ After you start the game, the board will be displayed. Use the arrow keys to adv
 Now you can open up your snake code and start playing around with it to make it do something more exciting than hitting a
 wall.
 
-Open up the web.rb file in the starter-snake-ruby directory and see what you can get it to do.  Every time you save
-this file, you will need to stop the server with Ctrl+C and re-start it with `foreman start web` to reload your snake code.
+Open up the `app/move.rb` file in the starter-snake-ruby directory and see what you can get it to do.  Every time you save
+this file, you will need to stop the server with Ctrl+C and re-start it with `ruby app/app.rb` to reload your snake code.
 
 ## Step 6 - Deploy it to the Internet
 
