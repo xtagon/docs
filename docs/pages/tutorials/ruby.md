@@ -141,6 +141,27 @@ wall.
 Open up the `app/move.rb` file in the starter-snake-ruby directory and see what you can get it to do.  Every time you save
 this file, you will need to stop the server with Ctrl+C and re-start it with `ruby app/app.rb` to reload your snake code.
 
+### Live Reloading
+
+If you find yourself restarting the server often, you can use a tool such as `rerun` to watch the app directory for changes and restart the server automatically. Here's how:
+
+Do this once to install `rerun`:
+
+```bash
+gem install rerun
+```
+
+Start the server this way:
+
+```bash
+rerun --dir app -- ruby app/app.rb
+```
+
+This will watch all the files in the `app` directory for changes, and the
+server will reload after you save your changes. There is a small delay, so it
+may miss a turn or two while restarting, if you have a live game running. This
+is only recommneded for testing and development.
+
 ## Step 6 - Deploy it to the Internet
 
 Have a look at the `README.md` file in your starter-snake-ruby directory for
